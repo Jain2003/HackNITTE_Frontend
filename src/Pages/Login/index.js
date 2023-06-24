@@ -1,23 +1,84 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
+import './index.css';
 
 //This is a test.
 function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
 
-    const [text, setText] = useState("");
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // const emailPattern  = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
+
+    // if(!email.match(emailPattern)){
+    //   alert("Invalid Email");
+    //   return;
+    // }
+    // authentication here
+  };
+    // const [text, setText] = useState("");
   
-    const getTest = async () => {
-      let t = await axios.get("/api/test");
-      setText(t.data.data);
-    }
+    // const getTest = async () => {
+    //   let t = await axios.get("/api/test");
+    //   setText(t.data.data);
+    // }
   
-    useEffect(() => {
-      getTest();
-    }, []);
+    // useEffect(() => {
+    //   getTest();
+    // }, []);
   
     return (
       <div className="App">
-        <h1>{text}</h1>
+        {/* <h1>{text}</h1> */}
+        <div className="card">
+        <h1>HACKNITTE</h1>
+        <h4>Login Here</h4>
+        <form onSubmit={handleSubmit}>
+          <div className="input-wrapper">
+            <input
+              required="true"
+              type="email"
+              id="email"
+              placeholder="Email"
+              value={email}
+              onChange={handleEmailChange}
+            />
+          </div>
+          
+          
+          <div className="input-wrapper">
+            <input
+            required="true"
+              type={showPassword ? 'text' : 'password'}
+              id="password"
+              placeholder="Password"
+              value={password}
+              onChange={handlePasswordChange}
+            />
+            <button className="password-toggle" onClick={togglePasswordVisibility}>
+            <p>{showPassword ? "Hide" : "Show"}</p>
+              {/* <img
+                src={showPassword ? {eyeImage} :  {eyeSlashImage}}
+                alt="Toggle Password Visibility"
+              /> */}
+            </button>
+          </div>
+          <button type="submit" className="login-btn">
+            Login
+          </button>
+        </form>
+      </div>
       </div>
     );
   }
