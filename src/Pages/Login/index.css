@@ -4,55 +4,76 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #191825;
-    /* body { */
-        /* background: linear-gradient(to bottom, #EB455F, #f7f7f8); */
-        /* body { */
-            /* background: linear-gradient(-45deg, #EB455F, #f7f7f8); */
-          /* } */
-          
-      /* } */
+    /* background-color: #191825; */
+    background: radial-gradient(126.06% 52.49% at 70.94% 80.09%, rgba(204, 27, 98, 0.50) 0%, rgba(25, 167, 206, 0.00) 100%), radial-gradient(98.95% 67.55% at 16.80% 27.92%, rgba(57, 49, 123, 0.50) 0%, rgba(25, 167, 206, 0.00)100%),#191825;
       
+  } 
+  .image-hack{
+    height: 50px;
+    width: 50px;
   }
-  
+  .logo{
+    
+    /* left-margin: 1px; */
+    position: absolute;
+    top: 50px;
+    left: 50px;
+  }
+  .hacknitte{
+    text-decoration: solid;
+    position: absolute;
+    top: 48px;
+    left: 120px;
+    color: #CFCFD9;
+    font-size: 35px;
+  }
   .card {
-    /* align-items: center; */
-    background-color: #fff;
-    /* padding: 40px; */
-    /* margin-top: 20px;
-    margin-bottom: 20px; */
+    align-items: center;
+    margin-left: 4px;
+    margin-right: 12px;
+    /* background: radial-gradient(126.06% 52.49% at 70.94% 80.09%, rgba(204, 27, 98, 0.50) 0%, rgba(25, 167, 206, 0.00) 100%), radial-gradient(98.95% 67.55% at 16.80% 27.92%, rgba(57, 49, 123, 0.50) 0%, rgba(25, 167, 206, 0.00)100%),#191825;
+
+    background-color: rgba(25, 167, 206, 0.00); */
+    background: linear-gradient(138.19deg, #191825 60.16%, #d6266c 141.47%);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     max-width: 600px; /* Adjust the width as per your preference */
-    width: 90%; /* Adjust the width as per your preference */
+    /* width: 90%; Adjust the width as per your preference */
     text-align: center;
-  }
+ }
   
-  h1 {
-    /* padding-top: 10px; */
-    color: #140d31;
-    font-size: 30px;
+ .welcome {
+    padding-top: 10px;
+    color: #E1F2F5;
+    font-size: 33px;
     margin-top: -24px;
     margin-bottom: -10px;
   }
   
-  h2 {
+  .login-text {
+    font-weight: lighter;
+    text-align: center;
+    color: #E1F2F5;
     font-size: 16px;
-    /* margin-bottom: 20px; */
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
   
   .input-wrapper {
     position: relative;
-    align-items: center;
+    /* align-items: center; */
     margin: auto;
   }
   
   input {
+    display: block;
+    margin-right: 10px;
+    background-color: #191825;
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 4px;
-    border: 1px solid #ccc;
+    border: 1.4px solid #ccc;
   }
   
   .password-toggle {
@@ -65,19 +86,38 @@ body {
     cursor: pointer;
   }
   
-  .forgot-password {
+  .no-account{
+    /* padding-left: 0;
+    padding-right: 0; */
+    color: #fff;
+    font-size: 12px;
+    /* margin-right: 1px;
+    margin-left: 120px;
+    margin-top: 1px;
+    margin-bottom: 20px; */
+  }
+  /* .forgot-password {
     text-decoration: none;
     display: block;
     margin-right: auto;
     margin-bottom: 20px;
     text-align: right;
+  } */
+
+  .login{
+    color: #E1F2F5;
+   margin: 10px;
+   font-size: 22px;
+   text-decoration: solid;
+   text-emphasis: bold;
   }
-  
+
   .login-btn {
     display: block;
     width: 100%;
-    padding: 10px;
-    background-color: #87a4f2;
+    padding: 1px;
+    background: linear-gradient(90.19deg, #CC1B62 0.16%, #39317B 111.47%);
+    /* background-color: #87a4f2; */
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -87,8 +127,10 @@ body {
   /* Responsive Styles */
   @media screen and (max-width: 480px) {
     .card {
-        /* align-items: center; */
       width: 90%;
       margin: auto;
     }
   }
+
+  
+ 

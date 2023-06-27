@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import './index.css';
+import hacknitte from '../../Images/hacknitte.png'
+import show from '../../Images/show.png'
+import hide from '../../Images/hide.png';
 
 //This is a test.
 function Login() {
@@ -41,9 +44,11 @@ function Login() {
     return (
       <div className="App">
         {/* <h1>{text}</h1> */}
+        <div className="logo"><img className="image-hack" src={hacknitte} alt="Logo"/></div>
+        <div className="hacknitte">HACKNITTE</div>
         <div className="card">
-        <h1>HACKNITTE</h1>
-        <h4>Login Here</h4>
+        <h1 className="welcome">WELCOME BACK</h1>
+        <h4 className="login-text">Login to your account</h4>
         <form onSubmit={handleSubmit}>
           <div className="input-wrapper">
             <input
@@ -67,15 +72,17 @@ function Login() {
               onChange={handlePasswordChange}
             />
             <button className="password-toggle" onClick={togglePasswordVisibility}>
-            <p>{showPassword ? "Hide" : "Show"}</p>
-              {/* <img
-                src={showPassword ? {eyeImage} :  {eyeSlashImage}}
+            {/* <p>{showPassword ? "Hide" : "Show"}</p> */}
+              <img
+                // src={showPassword ? {show} :  {hide}}
+                src={hide}
                 alt="Toggle Password Visibility"
-              /> */}
+              />
             </button>
           </div>
+          <p className="no-account">Don't have an account?</p>
           <button type="submit" className="login-btn">
-            Login
+            <p className="login"><b>Log in</b></p>
           </button>
         </form>
       </div>
