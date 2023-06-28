@@ -74,7 +74,8 @@ function Login() {
             <button className="password-toggle" onClick={togglePasswordVisibility}>
             {/* <p>{showPassword ? "Hide" : "Show"}</p> */}
               <img
-                src={showPassword ? show :  hide}
+                className="password-eye"
+                src={showPassword ? hide :  show}
                 // src={hide}
                 alt="Toggle Password Visibility"
               />

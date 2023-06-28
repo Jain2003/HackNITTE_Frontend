@@ -71,6 +71,7 @@ body {
     background-color: #191825;
     width: 100%;
     padding: 10px;
+    padding-right: 0;
     margin-bottom: 10px;
     border-radius: 4px;
     border: 1.4px solid #ccc;
@@ -103,7 +104,11 @@ body {
     margin-bottom: 20px;
     text-align: right;
   } */
-
+  .password-eye{
+    padding-right: 0;
+    margin-right: 1px;
+    height: 20px;
+  }
   .login{
     color: #E1F2F5;
    margin: 10px;
