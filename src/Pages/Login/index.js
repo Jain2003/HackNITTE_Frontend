@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
-import './index.css';
+import './login.css';
 import hacknitte from '../../Images/hacknitte.png'
 import show from '../../Images/show.png'
 import hide from '../../Images/hide.png';

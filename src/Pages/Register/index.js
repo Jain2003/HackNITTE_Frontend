@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 // import axios from 'axios';
-import './index.css';
+import './register.css';
 import hacknitte from '../../Images/hacknitte.png'
 import show from '../../Images/show.png'
 import hide from '../../Images/hide.png';
@@ -76,7 +76,7 @@ function Register() {
       //   <h1>{Text}</h1>
       // </div>
       <div className="App">
-      <div className="title-logo">
+      <div className="title-logo-register">
         <div className="logo"><img className="image-hack" src={hacknitte} alt="Logo"/></div>
         <div className="hacknitte">HACKNITTE</div>
         </div>

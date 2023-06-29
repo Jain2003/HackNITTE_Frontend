@@ -141,6 +141,9 @@ body {
     }
   }
   @media screen and (max-width: 1000px) {
+    .title-logo-register{
+      display: none;
+    }
     .all-content{
       display: flex;
       flex-direction: column;
