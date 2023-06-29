@@ -1,15 +1,12 @@
 import { useEffect, useState } from "react";
 // import axios from 'axios';
 import './index.css';
-// import eyeImage from '../../images/eye.jpg'
-// import eyeSlashImage from '../../images/eye-slash.jpg';
-//This is a test.
+import hacknitte from '../../Images/hacknitte.png'
+import show from '../../Images/show.png'
+import hide from '../../Images/hide.png';
 function Register() {
-//   const [showCard1, setShowCard1] = useState(true);
-//   const [showCard2, setShowCard2] = useState(false);
   const [username, setuserName] = useState('');
   const [email, setEmail] = useState('');
-//   const [error, setError] = useState('');
   const [rollno, setrollno] = useState('');
   const [codechefId, setcodechefId] = useState('');
   const [codeforcesId, setcodeforcesId] = useState('');
@@ -78,9 +75,14 @@ function Register() {
       // <div className="App">
       //   <h1>{Text}</h1>
       // </div>
+      <div className="App">
+      <div className="title-logo">
+        <div className="logo"><img className="image-hack" src={hacknitte} alt="Logo"/></div>
+        <div className="hacknitte">HACKNITTE</div>
+        </div>
       <div className="card">
-        <h1>HACKNITTE</h1>
-        <h4>Register Here</h4>
+        <h1 className="welcome">HACKNITTE</h1>
+        <h4 className="register-text">Register Here</h4>
         <form onSubmit={handleSubmit}>
           <div className="input-wrapper">
             <input
@@ -152,11 +154,11 @@ function Register() {
               onChange={handlePasswordChange}
             />
             <button className="password-toggle" onClick={togglePasswordVisibility}>
-            <p>{showPassword ? "Hide" : "Show"}</p>
-              {/* <img
-                src={showPassword ? {eyeImage} :  {eyeSlashImage}}
+              <img
+              className="password-eye"
+                src={showPassword ? hide :  show}
                 alt="Toggle Password Visibility"
-              /> */}
+              />
             </button>
           </div>
           <div className="input-wrapper">
@@ -169,18 +171,20 @@ function Register() {
               onChange={handleConfirmPasswordChange}
             />
             <button className="password-toggle" onClick={toggleConfirmPasswordVisibility}>
-            <p>{showConfirmPassword ? "Hide" : "Show"}</p>
-              {/* <img
-                src={showPassword ? {eyeImage} :  {eyeSlashImage}}
+              <img
+              className="password-eye"
+                src={showConfirmPassword ? hide :show}
                 alt="Toggle Password Visibility"
-              /> */}
+              />
             </button>
           </div>
           <button type="submit" className="register-btn">
-            Register
+           <p className="register">Register</p>
           </button>
         </form>
       </div>
+      </div>
+      
     );
   }
   

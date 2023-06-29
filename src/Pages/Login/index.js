@@ -5,7 +5,6 @@ import hacknitte from '../../Images/hacknitte.png'
 import show from '../../Images/show.png'
 import hide from '../../Images/hide.png';
 
-//This is a test.
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -44,8 +43,11 @@ function Login() {
     return (
       <div className="App">
         {/* <h1>{text}</h1> */}
+        <div className="title-logo">
         <div className="logo"><img className="image-hack" src={hacknitte} alt="Logo"/></div>
         <div className="hacknitte">HACKNITTE</div>
+        </div>
+        
         <div className="card">
         <h1 className="welcome">WELCOME BACK</h1>
         <h4 className="login-text">Login to your account</h4>
@@ -72,16 +74,17 @@ function Login() {
               onChange={handlePasswordChange}
             />
             <button className="password-toggle" onClick={togglePasswordVisibility}>
-            {/* <p>{showPassword ? "Hide" : "Show"}</p> */}
               <img
                 className="password-eye"
                 src={showPassword ? hide :  show}
-                // src={hide}
                 alt="Toggle Password Visibility"
               />
             </button>
           </div>
-          <p className="no-account">Don't have an account?</p>
+          <div className="no-account-div">
+          <p className="no-account"> Don't have an account?</p>
+          </div>
+          
           <button type="submit" className="login-btn">
             <p className="login"><b>Log in</b></p>
           </button>
